@@ -20,7 +20,7 @@ func DefaultConnectionOptions(ctxIn context.Context, credentialsProvider secret.
     ctx, span := trace.StartSpan(ctxIn, "DefaultConnectionOptions")
     defer span.End()
 
-    fmt.Print("Hello World")
+    fmt.Printf("Hello World")
 
     requiredEnvKeys := []config.EnvKey{config.PgUserEnv, config.PgDbEnv}
 

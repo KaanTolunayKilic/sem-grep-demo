@@ -21,6 +21,8 @@ func NewDefaultGCPBackupProvider(ctxIn context.Context, gcsClient gcs.CloudStora
     ctx, span := trace.StartSpan(ctxIn, "NewDefaultGCPBackupProvider")
     defer span.End()
 
+    fmt.Printf("Hello World")
+
     if gcsClient == nil || !gcsClient.IsInitialized(ctx) {
         return &defaultGCPProjectProvider{}, fmt.Errorf("can not create instance of defaultGCSBackupProvider with unititialized GcsClient")
     }

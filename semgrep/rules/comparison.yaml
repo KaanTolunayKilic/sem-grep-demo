@@ -1,0 +1,19 @@
+rules:
+  - id: same-comparison
+    languages:
+      - go
+    message: Useless comparison of same variable.
+    pattern: $X == $X
+    severity: ERROR
+
+  - id: is-comparison
+    languages:
+      - go
+    pattern: |
+      if $E {
+        $S
+      } else {
+        $S
+      }
+    message: The operator 'is' is for reference equality, not value equality! Use `==` instead!
+    severity: ERROR

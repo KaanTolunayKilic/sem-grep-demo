@@ -1,0 +1,7 @@
+rules:
+  - id: no-prints-in-prod
+    languages:
+      - go
+    pattern: fmt.Print(...)
+    message: Use log.Info() instead of fmt.Print()
+    severity: INFO

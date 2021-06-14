@@ -4,9 +4,9 @@ rules:
       - go
     message: Useless comparison of same variable.
     pattern: $X == $X
-    severity: ERROR
+    severity: WARNING
 
-  - id: is-comparison
+  - id: same-statement
     languages:
       - go
     pattern: |
@@ -15,5 +15,5 @@ rules:
       } else {
         $S
       }
-    message: The operator 'is' is for reference equality, not value equality! Use `==` instead!
-    severity: ERROR
+    message: if-else-block have the same statements.
+    severity: WARNING

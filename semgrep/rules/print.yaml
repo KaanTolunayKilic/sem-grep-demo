@@ -4,4 +4,4 @@ rules:
       - go
     pattern: fmt.Print(...)
     message: Use log.Info() instead of fmt.Print()
-    severity: INFO
+    severity: WARNING

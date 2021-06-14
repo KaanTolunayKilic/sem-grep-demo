@@ -20,4 +20,4 @@ rules:
               ...
           }
     message: Returned error must be handled.
-    severity: ERROR
+    severity: WARNING
